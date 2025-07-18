@@ -3,7 +3,7 @@
 def call(Map configmap) {
     pipeline {
         agent {
-            label 'configmap.get('label')'
+            label configmap.get('label')
         }
 
         

@@ -90,7 +90,7 @@ def call(Map configmap) {
                     }
                 }
                 steps {
-                    build job: "${component}-cd", parameters: [string(name: "image_version", value: "${app_version}"), string(name: "env_name", value: "dev")], wait: false
+                    build job: "../${component}-cd", parameters: [string(name: "image_version", value: "${app_version}"), string(name: "env_name", value: "dev")], wait: false
                 }
             }
 

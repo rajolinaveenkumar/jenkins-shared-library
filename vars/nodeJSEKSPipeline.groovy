@@ -73,6 +73,7 @@ def call(Map configmap) {
                             aws ecr get-login-password --region ${region} | docker login --username AWS --password-stdin ${acc_id}.dkr.ecr.${region}.amazonaws.com
                             
                             docker build -t ${acc_id}.dkr.ecr.${region}.amazonaws.com/expense-dev/${component}:${app_version} .
+                            
 
                             docker images
 

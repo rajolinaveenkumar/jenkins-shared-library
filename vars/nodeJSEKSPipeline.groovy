@@ -2,12 +2,11 @@
 
 def call(Map configmap) {
     pipeline {
-        // agent {
-        //     label configmap.get('label')
-        // }
+        agent {
+            label 'agent-1-label'
+        }
 
-        def agentLabel = configmap.get('label')
-
+        
         environment {
             poroject = configmap.get('project')
             env_name = configmap.get('env')
